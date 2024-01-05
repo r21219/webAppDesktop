@@ -1,6 +1,6 @@
 import {useEffect, useState} from "react";
 import WebSocketService from "../service/WebSocketService";
-
+//TODO make sure to implement message model
 const ChatMessageManagerComponent = () => {
     const [message, setMessage] = useState<string | null>(null);
     const {connect, disconnect, stompClient} = WebSocketService();
