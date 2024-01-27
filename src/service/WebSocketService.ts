@@ -1,9 +1,10 @@
 import { Client, Message } from '@stomp/stompjs';
+import {CustomerMessage} from "../model/CustomerMessage";
 
 const WebSocketService = () => {
     let stompClient: Client | null = null;
 
-    const connect = (topic: string, onMessageCallback: (message: string) => void) => {
+    const connect = (topic: string, onMessageCallback: (message: CustomerMessage) => void) => {
         stompClient = new Client({
             brokerURL: 'ws://localhost:9090/ws-message',
             reconnectDelay: 5000,
@@ -14,7 +15,9 @@ const WebSocketService = () => {
         const onConnect = (frame: any) => {
             console.log('Connected to WebSocket');
             stompClient?.subscribe(topic, (message: Message) => {
-                onMessageCallback(message.body);
+                // Parse the message body to a CustomerMessage object
+                const msg: CustomerMessage = JSON.parse(message.body);
+                onMessageCallback(msg);
             });
         };
 

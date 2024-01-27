@@ -1,12 +1,14 @@
 import {useEffect, useState} from "react";
 import WebSocketService from "../service/WebSocketService";
+import {CustomerMessage} from "../model/CustomerMessage";
+
 //TODO make sure to implement message model
 const ChatMessageManagerComponent = () => {
-    const [message, setMessage] = useState<string | null>(null);
+    const [message, setMessage] = useState<CustomerMessage | null>(null);
     const {connect, disconnect, stompClient} = WebSocketService();
 
     useEffect(() => {
-        const onMessageReceived = (msg: string) => {
+        const onMessageReceived = (msg: CustomerMessage) => {
             setMessage(msg);
         };
 
@@ -20,7 +22,7 @@ const ChatMessageManagerComponent = () => {
     return (
         <div>
             <h2>Received Message:</h2>
-            {message && <p>{message}</p>}
+            {message && <p>{message.content}</p>}
         </div>
     );
 };
