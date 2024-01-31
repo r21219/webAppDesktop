@@ -21,7 +21,7 @@ const ChatMessageManagerComponent = () => {
 
     return (
         <div>
-            <h2>Received Message:</h2>
+
             {message && <p>{message.content}</p>}
         </div>
     );
