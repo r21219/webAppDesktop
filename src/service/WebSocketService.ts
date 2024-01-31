@@ -20,7 +20,7 @@ const WebSocketService = () => {
                 onMessageCallback(msg);
             });
         };
-
+//Hello
         const onError = (error: any) => {
             console.error('WebSocket Error:', error);
             // Handle the error as needed
