@@ -15,4 +15,21 @@ code {
   height: 85px;
 }
 
+.bubble {
+  max-width: 70%;
+  padding: 10px;
+  margin: 5px;
+  border-radius: 10px;
+}
+
+.bubble-left {
+  background-color: #f0f0f0;
+  align-self: flex-start;
+}
+
+.bubble-right {
+  background-color: #007bff;
+  align-self: flex-end;
+  color: #fff;
+}
 
