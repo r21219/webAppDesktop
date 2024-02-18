@@ -5,7 +5,6 @@ import { useState } from "react";
 const Register = () => {
     const [formData, setFormData] = useState({ //definuju
         name: "",
-        email: "",
         password: "",
         confirmPassword: "",
     });
@@ -21,7 +20,7 @@ const Register = () => {
         e.preventDefault();
 
 //validation............................................................................................
-    if (!formData.name || !formData.email || !formData.password || !formData.confirmPassword) {
+    if (!formData.name || !formData.password || !formData.confirmPassword) {
         setError("All fields are required");
         return;
     }
@@ -31,7 +30,7 @@ const Register = () => {
         return;
     }
 //API-POST...............................................................................................
-        const apiUrl = "http://localhost:8080/users";
+        const apiUrl = "http://localhost:9090/api/v1/auth/register";
 
         try {
             const response = await fetch(apiUrl, {
@@ -41,7 +40,6 @@ const Register = () => {
                 },
                 body: JSON.stringify({
                     name: formData.name,
-                    email: formData.email,
                     password: formData.password,
                 }),
             });
@@ -72,12 +70,6 @@ const Register = () => {
                                           placeholder={"Name"}
                                           name="name"
                                           value={formData.name}
-                                          onChange={handleInputChange}/>
-
-                            <Form.Control type={"email"}
-                                          placeholder={"E-mail"}
-                                          name="email"
-                                          value={formData.email}
                                           onChange={handleInputChange}/>
 
                             <Form.Control type={"password"}
