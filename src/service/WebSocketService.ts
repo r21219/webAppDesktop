@@ -1,29 +1,24 @@
-import { Client, Message } from '@stomp/stompjs';
+import {Client, Message} from '@stomp/stompjs';
 import {CustomerMessage} from "../model/CustomerMessage";
+import {ApiClient} from "../controller/ApiClient";
 
 const WebSocketService = () => {
     let stompClient: Client | null = null;
 
     const connect = (topic: string, onMessageCallback: (message: CustomerMessage) => void) => {
+        const token = ApiClient.getToken();
         stompClient = new Client({
-            brokerURL: 'ws://localhost:9090/ws-message',
+            brokerURL: `ws://localhost:9090/ws-message?token=${token}`,
             reconnectDelay: 5000,
-            heartbeatIncoming: 4000,
-            heartbeatOutgoing: 4000,
         });
 
         const onConnect = (frame: any) => {
-            console.log('Connected to WebSocket');
+            console.log('WebSocket connected successfully');
             stompClient?.subscribe(topic, (message: Message) => {
                 // Parse the message body to a CustomerMessage object
                 const msg: CustomerMessage = JSON.parse(message.body);
                 onMessageCallback(msg);
             });
-        };
-//Hello
-        const onError = (error: any) => {
-            console.error('WebSocket Error:', error);
-            // Handle the error as needed
         };
 
         stompClient.onConnect = onConnect;
@@ -34,11 +29,10 @@ const WebSocketService = () => {
     const disconnect = () => {
         if (stompClient !== null) {
             stompClient.deactivate();
-            console.log('Disconnected from WebSocket');
         }
     };
 
-    return { connect, disconnect, stompClient };
+    return {connect, disconnect, stompClient};
 };
 
 export default WebSocketService;

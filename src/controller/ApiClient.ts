@@ -1,12 +1,5 @@
-
 export class ApiClient {
-    public static async getConversationByTopicNameAndRoutingKey(topicName: string, routingKey: string | undefined): Promise<string[]> {
-        const response = await fetch("http://localhost:9090/api/v1/conversation" + topicName + "/" + routingKey);
-        if (response.ok) {
-            return await response.json();
-        }
-        throw new Error(await response.json());
-    }
+    private static token: string | null = null;
 
     public static async login(name: string, password: string): Promise<boolean> {
         const apiUrl = "http://localhost:9090/api/v1/auth/login";
@@ -24,7 +17,9 @@ export class ApiClient {
             });
 
             if (response.ok) {
-                return true; // Login successful
+                const data = await response.json();
+                this.token = data.token;
+                return true;
             } else {
                 const errorData = await response.json();
                 throw new Error(errorData.message || "Login failed");
@@ -34,7 +29,7 @@ export class ApiClient {
         }
     }
 
-    public static async register(name: string, password: string): Promise<void> {
+    public static async register(name: string, password: string): Promise<boolean> {
         const apiUrl = "http://localhost:9090/api/v1/auth/register";
 
         try {
@@ -49,12 +44,20 @@ export class ApiClient {
                 }),
             });
 
-            if (!response.ok) {
+            if (response.ok) {
+                const data = await response.json();
+                this.token = data.token; // Store the token
+                return true; // Registration successful
+            } else {
                 const errorData = await response.json();
                 throw new Error(errorData.message || "Registration failed");
             }
         } catch (error) {
             throw new Error("An error occurred during registration");
         }
+    }
+
+    public static getToken(): string | null {
+        return this.token;
     }
 }

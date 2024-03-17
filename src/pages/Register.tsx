@@ -1,7 +1,9 @@
-import {Alert, Button, Form, Row, Col, Stack} from "react-bootstrap";
+import {Alert, Button, Col, Form, Row, Stack} from "react-bootstrap";
 import {Link, useNavigate} from "react-router-dom";
-import { useState } from "react";
+import {useState} from "react";
 import {ApiClient} from "../controller/ApiClient";
+import WebSocketService from "../service/WebSocketService";
+import {CustomerMessage} from "../model/CustomerMessage";
 
 const Register = () => {
     const [formData, setFormData] = useState({
@@ -12,6 +14,7 @@ const Register = () => {
 
     const [error, setError] = useState<string | null>(null);
     const navigate = useNavigate();
+    const {connect} = WebSocketService();
 
     const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         setFormData({...formData, [e.target.name]: e.target.value});
@@ -32,6 +35,8 @@ const Register = () => {
 
         try {
             await ApiClient.register(formData.name, formData.password);
+            console.log("Registration successful");
+            connectWebSocket();
             navigate("/login");
         } catch (error: unknown) {
             if (typeof error === "string") {
@@ -42,6 +47,14 @@ const Register = () => {
         }
     };
 
+    const connectWebSocket = async () => {
+        // Connect to WebSocket upon successful registration
+        connect('/topic/msg/', (message: CustomerMessage) => {
+            // Handle incoming messages
+            console.log(message);
+        });
+    };
+
     return (
         <>
             <Form>
@@ -49,26 +62,39 @@ const Register = () => {
                     <Col xs={"5"}>
                         <Stack gap={3}>
                             <h2>Register</h2>
-                            <Form.Control type={"text"}
-                                          placeholder={"Name"}
-                                          name="name"
-                                          value={formData.name}
-                                          onChange={handleInputChange}/>
+                            <Form.Control
+                                type={"text"}
+                                placeholder={"Name"}
+                                name="name"
+                                value={formData.name}
+                                onChange={handleInputChange}
+                            />
 
-                            <Form.Control type={"password"}
-                                          placeholder={"Password"}
-                                          name="password"
-                                          value={formData.password}
-                                          onChange={handleInputChange}/>
+                            <Form.Control
+                                type={"password"}
+                                placeholder={"Password"}
+                                name="password"
+                                value={formData.password}
+                                onChange={handleInputChange}
+                            />
 
-                            <Form.Control type={"password"}
-                                          placeholder={"Confirm password"}
-                                          name="confirmPassword"
-                                          value={formData.confirmPassword}
-                                          onChange={handleInputChange}/>
+                            <Form.Control
+                                type={"password"}
+                                placeholder={"Confirm password"}
+                                name="confirmPassword"
+                                value={formData.confirmPassword}
+                                onChange={handleInputChange}
+                            />
 
-                            <p>Already have an account? <Link to={"/login"} className={"text-decoration-none"}>Login</Link></p>
-                            <Button variant={"primary"} type={"submit"} onClick={handleRegistration}> Register </Button>
+                            <p>
+                                Already have an account?{" "}
+                                <Link to={"/login"} className={"text-decoration-none"}>
+                                    Login
+                                </Link>
+                            </p>
+                            <Button variant={"primary"} type={"submit"} onClick={handleRegistration}>
+                                Register
+                            </Button>
                             {error && <Alert variant={"danger"}>{error}</Alert>}
                         </Stack>
                     </Col>
