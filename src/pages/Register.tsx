@@ -1,9 +1,10 @@
 import {Alert, Button, Form, Row, Col, Stack} from "react-bootstrap";
 import {Link, useNavigate} from "react-router-dom";
 import { useState } from "react";
+import {ApiClient} from "../controller/ApiClient";
 
 const Register = () => {
-    const [formData, setFormData] = useState({ //definuju
+    const [formData, setFormData] = useState({
         name: "",
         password: "",
         confirmPassword: "",
@@ -19,48 +20,30 @@ const Register = () => {
     const handleRegistration = async (e: React.FormEvent) => {
         e.preventDefault();
 
-//validation............................................................................................
-    if (!formData.name || !formData.password || !formData.confirmPassword) {
-        setError("All fields are required");
-        return;
-    }
+        if (!formData.name || !formData.password || !formData.confirmPassword) {
+            setError("All fields are required");
+            return;
+        }
 
-    if (formData.password !== formData.confirmPassword) {
-        setError("Passwords do not match");
-        return;
-    }
-//API-POST...............................................................................................
-        const apiUrl = "http://localhost:9090/api/v1/auth/register";
+        if (formData.password !== formData.confirmPassword) {
+            setError("Passwords do not match");
+            return;
+        }
 
         try {
-            const response = await fetch(apiUrl, {
-                method: "POST",
-                headers: {
-                    "Content-Type": "application/json",
-                },
-                body: JSON.stringify({
-                    name: formData.name,
-                    password: formData.password,
-                }),
-            });
-
-            if (response.ok) {
-                // Registration successful, navigate to login page or display a success message
-                navigate("/login");
+            await ApiClient.register(formData.name, formData.password);
+            navigate("/login");
+        } catch (error: unknown) {
+            if (typeof error === "string") {
+                setError(error);
             } else {
-                // Registration failed, handle the error
-                const errorData = await response.json();
-                setError(errorData.message); // Replace "message" with the actual property in your API response containing the error message
+                setError("An error occurred during registration");
             }
-        } catch (error) {
-            // Handle network errors, parsing errors, etc.
-            setError("An error occurred during registration");
         }
     };
 
-
-//......................................................................................................
-        return <>
+    return (
+        <>
             <Form>
                 <Row style={{height: "100", justifyContent: "center", padding: "5%"}}>
                     <Col xs={"5"}>
@@ -92,5 +75,7 @@ const Register = () => {
                 </Row>
             </Form>
         </>
-    }
+    );
+};
+
 export default Register;

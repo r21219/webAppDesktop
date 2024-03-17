@@ -1,6 +1,7 @@
 import { Alert, Button, Form, Row, Col, Stack } from "react-bootstrap";
 import { Link, useNavigate } from "react-router-dom";
 import { useState } from "react";
+import {ApiClient} from "../controller/ApiClient";
 
 const Login = () => {
   const [formData, setFormData] = useState({
@@ -22,30 +23,16 @@ const Login = () => {
       return;
     }
 
-    const apiUrl = "http://localhost:9090/api/v1/auth/login";
-
     try {
-      const response = await fetch(apiUrl, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          name: formData.name,
-          password: formData.password,
-        }),
-      });
-
-      if (response.ok) {
-        const responseData = await response.json();
-        console.log("Login successful:", responseData);
-        navigate("/"); // Redirect to the home page or another page after successful login
+      await ApiClient.login(formData.name, formData.password);
+      console.log("Login successful");
+      navigate("/");
+    } catch (error: unknown) {
+      if (typeof error === "string") { // Check if error is of type string
+        setError(error);
       } else {
-        const errorData = await response.json();
-        setError(errorData.message || "Login failed");
+        setError("An error occurred during login");
       }
-    } catch (error) {
-      setError("An error occurred during login");
     }
   };
 
