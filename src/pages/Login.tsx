@@ -4,8 +4,10 @@ import {useState} from "react";
 import {ApiClient} from "../controller/ApiClient";
 import WebSocketService from "../service/WebSocketService";
 import {CustomerMessage} from "../model/CustomerMessage";
+import {useAuth} from "../context/AuthContext";
 
 const Login = () => {
+    const {setUserName} = useAuth();
     const [formData, setFormData] = useState({
         name: "",
         password: "",
@@ -29,6 +31,7 @@ const Login = () => {
         try {
             await ApiClient.login(formData.name, formData.password);
             console.log("Login successful");
+            setUserName(formData.name);
             connectWebSocket();
             navigate("/");
         } catch (error: unknown) {

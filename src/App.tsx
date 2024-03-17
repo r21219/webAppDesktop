@@ -7,7 +7,8 @@ import Login from "./pages/Login";
 import Chat from "./pages/Chat";
 import Register from "./pages/Register";
 import NavBar from "./parts/NavBar";
-//boostrap imports
+import { AuthProvider } from './context/AuthContext';
+
 import 'bootstrap/dist/css/bootstrap.min.css'
 import {Container} from "react-bootstrap";
 
@@ -15,6 +16,7 @@ import {Container} from "react-bootstrap";
 function App() {
   return (
       <>
+      <AuthProvider>
       <NavBar/>
       <Container>
           <Routes>
@@ -27,7 +29,9 @@ function App() {
 
           <ChatMessageManagerComponent></ChatMessageManagerComponent>
       </Container>
+      </AuthProvider>
       </>
+
   );
 }
 
