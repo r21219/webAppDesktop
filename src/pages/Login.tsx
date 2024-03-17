@@ -22,7 +22,7 @@ const Login = () => {
       return;
     }
 
-    const apiUrl = "http://localhost:9090/api/v1/login";
+    const apiUrl = "http://localhost:9090/api/v1/auth/login";
 
     try {
       const response = await fetch(apiUrl, {

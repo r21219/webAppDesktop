@@ -12,7 +12,7 @@ const ChatMessageManagerComponent = () => {
             setMessage(msg);
         };
 
-        connect('/topic/msg', onMessageReceived);
+        connect('/topic/msg/', onMessageReceived);
 
         return () => {
             disconnect();
