@@ -4,11 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3a0c8874-ddad-46b5-a13d-7d2476a9396c" name="Changes" comment="remade Login and register">
+    <list default="true" id="3a0c8874-ddad-46b5-a13d-7d2476a9396c" name="Changes" comment="Added websocket functions to login and register">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ChatMessageManagerComponent.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ChatMessageManagerComponent.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controller/ApiClient.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/ApiClient.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/Login.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Login.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/parts/NavBar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/parts/NavBar.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Register.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Register.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/service/WebSocketService.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/service/WebSocketService.ts" afterDir="false" />
     </list>
     <list id="27c46bc7-9e82-49d1-b8b6-f5b4ce572a73" name="Changes by Lenovo" comment="" />
     <option name="SHOW_DIALOG" value="false" />
@@ -55,14 +57,14 @@
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "master",
     "jdk.selected.JAVA_MODULE": "1.8",
-    "last_opened_file_path": "C:/Users/Lenovo/Desktop/SWI2_Semestral_Work-main/frontend",
+    "last_opened_file_path": "C:/Users/Lenovo/Desktop/Writeme-Spring-boot",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "npm.start.executor": "Debug",
-    "ts.external.directory.path": "C:\\Users\\vikto\\Desktop\\ŠKOLA\\SWI2\\webAppDesktop\\node_modules\\typescript\\lib",
+    "ts.external.directory.path": "C:\\Users\\Lenovo\\Desktop\\SchoolProjects\\SWI2\\Semestral_Project\\webAppDesktop\\node_modules\\typescript\\lib",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -103,6 +105,7 @@
       <workItem from="1710659664930" duration="401000" />
       <workItem from="1710660181778" duration="628000" />
       <workItem from="1710663851479" duration="15854000" />
+      <workItem from="1712494813714" duration="7369000" />
     </task>
     <task id="LOCAL-00001" summary="new chat,login,navbar,register (just boostrap and routes)&#10;modified tsconfig.json, index.tsx, App.tsx,">
       <created>1706729696710</created>

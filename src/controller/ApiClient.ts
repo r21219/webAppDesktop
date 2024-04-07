@@ -18,13 +18,17 @@ export class ApiClient {
 
             if (response.ok) {
                 const data = await response.json();
-                this.token = data.token;
+                const token = data.token; // Extract the token from the response data
+                console.log("Login token:", token); // Log the token
+                this.token = token; // Update the token
                 return true;
             } else {
                 const errorData = await response.json();
+                console.error("Login error:", errorData); // Log the error data
                 throw new Error(errorData.message || "Login failed");
             }
         } catch (error) {
+            console.error("An error occurred during login:", error); // Log the error
             throw new Error("An error occurred during login");
         }
     }
@@ -46,13 +50,17 @@ export class ApiClient {
 
             if (response.ok) {
                 const data = await response.json();
-                this.token = data.token; // Store the token
+                const token = data.token; // Extract the token from the response data
+                console.log("Register token:", token); // Log the token
+                this.token = token; // Update the token
                 return true; // Registration successful
             } else {
                 const errorData = await response.json();
+                console.error("Register error:", errorData); // Log the error data
                 throw new Error(errorData.message || "Registration failed");
             }
         } catch (error) {
+            console.error("An error occurred during registration:", error); // Log the error
             throw new Error("An error occurred during registration");
         }
     }

@@ -49,7 +49,7 @@ const Register = () => {
 
     const connectWebSocket = async () => {
         // Connect to WebSocket upon successful registration
-        connect('/topic/msg/', (message: CustomerMessage) => {
+        connect( (message: CustomerMessage) => {
             // Handle incoming messages
             console.log(message);
         });

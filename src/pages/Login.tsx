@@ -45,7 +45,7 @@ const Login = () => {
 
     const connectWebSocket = async () => {
         const {connect, disconnect} = WebSocketService();
-        connect('/topic/msg/', (message: CustomerMessage) => {
+        connect((message: CustomerMessage) => {
             console.log(message);
         });
     };
