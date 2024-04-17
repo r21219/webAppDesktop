@@ -4,20 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3a0c8874-ddad-46b5-a13d-7d2476a9396c" name="Changes" comment="Added wireframes and todos for the future development of the FE">
-      <change afterPath="$PROJECT_DIR$/src/components/Chat/MainChatWindow.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Chat/SideContactsWindow.tsx" afterDir="false" />
+    <list default="true" id="3a0c8874-ddad-46b5-a13d-7d2476a9396c" name="Changes" comment="Renamed previous components to better names&#10;Updated code to be more readable">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Chat/ChatListRenderer.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Chat/ChatMainWindowRenderer.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ChatMessageManagerComponent.tsx" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/context/AuthContext.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/context/AuthContext.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controller/ApiClient.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/ApiClient.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Chat.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Chat.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Login.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Login.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Register.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Register.tsx" afterDir="false" />
     </list>
     <list id="27c46bc7-9e82-49d1-b8b6-f5b4ce572a73" name="Changes by Lenovo" comment="" />
     <option name="SHOW_DIALOG" value="false" />
@@ -138,7 +127,7 @@
       <workItem from="1712763456885" duration="859000" />
       <workItem from="1713272337764" duration="578000" />
       <workItem from="1713358322016" duration="972000" />
-      <workItem from="1713359727494" duration="4715000" />
+      <workItem from="1713359727494" duration="5146000" />
     </task>
     <task id="LOCAL-00001" summary="new chat,login,navbar,register (just boostrap and routes)&#10;modified tsconfig.json, index.tsx, App.tsx,">
       <created>1706729696710</created>
@@ -222,7 +211,15 @@
       <option name="project" value="LOCAL" />
       <updated>1713362594675</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Renamed previous components to better names&#10;Updated code to be more readable">
+      <option name="closed" value="true" />
+      <created>1713364589932</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1713364589932</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -250,6 +247,7 @@
     <MESSAGE value="Changed the WebSocketService.ts connection to the websocket and also updated the url" />
     <MESSAGE value="Removed websocket typo" />
     <MESSAGE value="Added wireframes and todos for the future development of the FE" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added wireframes and todos for the future development of the FE" />
+    <MESSAGE value="Renamed previous components to better names&#10;Updated code to be more readable" />
+    <option name="LAST_COMMIT_MESSAGE" value="Renamed previous components to better names&#10;Updated code to be more readable" />
   </component>
 </project>

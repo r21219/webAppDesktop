@@ -10,7 +10,7 @@ interface AuthContextType {
 const AuthContext = createContext<AuthContextType | undefined>(undefined);
 
 export const AuthProvider: React.FC<PropsWithChildren<{}>> = ({ children }) => {
-    let [userName, setUserName] = useState<string>('');
+    const [userName, setUserName] = useState<string>('');
 
     const logout = () => {
         WebSocketService().disconnect();
