@@ -15,6 +15,7 @@ export const AuthProvider: React.FC<PropsWithChildren<{}>> = ({ children }) => {
     const logout = () => {
         WebSocketService().disconnect();
         setUserName('');
+
     };
 
     return (

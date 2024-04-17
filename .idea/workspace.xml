@@ -4,9 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3a0c8874-ddad-46b5-a13d-7d2476a9396c" name="Changes" comment="Renamed previous components to better names&#10;Updated code to be more readable">
+    <list default="true" id="3a0c8874-ddad-46b5-a13d-7d2476a9396c" name="Changes" comment="remade Login and register">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/context/AuthContext.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/context/AuthContext.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/parts/NavBar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/parts/NavBar.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/service/WebSocketService.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/service/WebSocketService.ts" afterDir="false" />
     </list>
     <list id="27c46bc7-9e82-49d1-b8b6-f5b4ce572a73" name="Changes by Lenovo" comment="" />
     <option name="SHOW_DIALOG" value="false" />
@@ -29,12 +31,12 @@
     &quot;state&quot;: &quot;OPEN&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/r21219/webAppDesktop",
-    "accountId": "8bdb0b81-53d5-4d37-a92d-ac60fb422eb8"
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/r21219/webAppDesktop&quot;,
+    &quot;accountId&quot;: &quot;8bdb0b81-53d5-4d37-a92d-ac60fb422eb8&quot;
   }
-}]]></component>
+}</component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
@@ -65,7 +67,7 @@
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "npm.start.executor": "Debug",
-    "ts.external.directory.path": "C:\\Users\\Lenovo\\Desktop\\SchoolProjects\\SWI2\\Semestral_Project\\webAppDesktop\\node_modules\\typescript\\lib",
+    "ts.external.directory.path": "C:\\Users\\vikto\\Desktop\\ŠKOLA\\SWI2\\webAppDesktop\\node_modules\\typescript\\lib",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -127,7 +129,7 @@
       <workItem from="1712763456885" duration="859000" />
       <workItem from="1713272337764" duration="578000" />
       <workItem from="1713358322016" duration="972000" />
-      <workItem from="1713359727494" duration="5146000" />
+      <workItem from="1713359727494" duration="4715000" />
     </task>
     <task id="LOCAL-00001" summary="new chat,login,navbar,register (just boostrap and routes)&#10;modified tsconfig.json, index.tsx, App.tsx,">
       <created>1706729696710</created>
@@ -211,15 +213,7 @@
       <option name="project" value="LOCAL" />
       <updated>1713362594675</updated>
     </task>
-    <task id="LOCAL-00012" summary="Renamed previous components to better names&#10;Updated code to be more readable">
-      <option name="closed" value="true" />
-      <created>1713364589932</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1713364589932</updated>
-    </task>
-    <option name="localTasksCounter" value="13" />
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -247,7 +241,6 @@
     <MESSAGE value="Changed the WebSocketService.ts connection to the websocket and also updated the url" />
     <MESSAGE value="Removed websocket typo" />
     <MESSAGE value="Added wireframes and todos for the future development of the FE" />
-    <MESSAGE value="Renamed previous components to better names&#10;Updated code to be more readable" />
-    <option name="LAST_COMMIT_MESSAGE" value="Renamed previous components to better names&#10;Updated code to be more readable" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added wireframes and todos for the future development of the FE" />
   </component>
 </project>
