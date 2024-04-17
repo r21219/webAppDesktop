@@ -1,12 +1,13 @@
 import {Button, Col, Form, Row, Stack} from "react-bootstrap";
 import {Link} from "react-router-dom";
 import { PersonFillAdd  } from 'react-bootstrap-icons';
+
 import { ListGroup } from 'react-bootstrap';
 
 const SideContactsWindow = () =>{
     return (
         <div className= " size-box d-flex flex-column">
-            <div className="position-sticky top-0 bg-white pb-2">
+            <div className="position-sticky top-0 bg-white">
                 <Form>
                     <Form.Group className="text-muted d-flex justify-content-start align-items-center pe-3 mt-0">
                         <Form.Control type="text" placeholder="Find conversation..."/>

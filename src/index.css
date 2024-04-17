@@ -17,7 +17,17 @@ code {
   padding: 10px;
   margin: 5px;
   border-radius: 10px;
+  position: relative;
 }
+
+.userName {
+  font-size: small;
+  color: lightgray;
+  position: absolute;
+  bottom: 100%;
+  left: 0;
+}
+
 
 .bubble-left {
   background-color: #f0f0f0;
@@ -30,12 +40,42 @@ code {
   color: #fff;
 }
 
+
+
 .size-box{
   border: 1px solid #ccc;
-  padding: 10px;
+  padding: 10px ;
   overflow-y: auto;
   border-radius: 5px;
   max-height: 80vh;
   min-height: 80vh;
 }
 
+.size-box-main{
+  border: 1px solid #ccc;
+  padding: 10px ;
+  overflow-y: auto;
+  border-radius: 5px;
+  max-height: 80vh;
+  min-height: 80vh;
+  min-width: 70%;
+}
+
+
+/*scrollbar fun >:3*/
+::-webkit-scrollbar {
+  width: 5px; /* Adjust scrollbar width */
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1; /* Color of the tracking area */
+}
+
+::-webkit-scrollbar-thumb {
+  background: #dcdcdc; /* Color of the scroll thumb */
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #bfbfbf; /* Color of the scroll thumb on hover*/
+}

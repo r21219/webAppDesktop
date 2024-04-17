@@ -1,53 +1,43 @@
-import {Button, Form, Stack} from "react-bootstrap";
-
+import {Button, Form, Stack, InputGroup} from "react-bootstrap";
+import { Send } from 'react-bootstrap-icons';
 const MainChatWindow = () =>{
-    return (<div className="flex-grow-1 message-box d-flex flex-column " style={{
-            border: "1px solid #ccc",
-            padding: "10px",
-            borderRadius: "5px",
-            overflowY: "auto",
-            height: "550px"
-        }}>
+    return (
+        <div className="size-box-main d-flex flex-column">
 
-            <Stack direction="vertical" gap={3} className="justify-content-end">
-                <div className="bubble bubble-left">Chat1</div>
-                <div className="bubble bubble-right">Chat2</div>
-                <div className="bubble bubble-left">Chat3 - pokus jestli resize ahoj ....................................
-                    .......................................................
-                    .......................
-                </div>
-                <div className="bubble bubble-right">Chat - pokus jestli resize ahoj ....................................
-                    .......................................................
-                    .......................
-                </div>
-                <div className="bubble bubble-left">Chat3 - pokus jestli resize ahoj ....................................
-                    .......................................................
-                    .......................
-                </div>
-                <div className="bubble bubble-right">Chat - pokus jestli resize ahoj ....................................
-                    .......................................................
-                    .......................
-                </div>
-                <div className="bubble bubble-left">Chat3 - pokus jestli resize ahoj ....................................
-                    .......................................................
-                    .......................
-                </div>
-                <div className="bubble bubble-right">Chat - pokus jestli resize ahoj ....................................
-                    .......................................................
-                    .......................
-                </div>
-                {/* Add more chat bubbles as needed */}
-            </Stack>
+            <div className="position-sticky top-0 bg-white">
+                <p>Pokusný kralík1</p> {/*{userName} až bude předavat nějaka ta jmena -const nahoře definovana ofc*/}
+                <hr/>
+            </div>
 
-            <Form className="position-sticky bottom-0">
-                <Form.Group className="text-muted d-flex justify-content-start align-items-center pe-3 pt-3 mt-2">
-                    <Form.Control type="text" placeholder="Type message"/>
-                    <Button variant="primary" type="button">
-                        Odeslat
-                    </Button>
-                </Form.Group>
-            </Form>
+            <div className="flex-grow-1 overflow-auto pt-3">
+                <Stack direction="vertical" gap={3} className="justify-content-end">
+                    <div className="bubble bubble-right">
+                        <div className="userName">já</div>
+                        Chat1
+                    </div>
+                    <div className="bubble bubble-left">
+                        <div className="userName">jmeno123</div> {/*{userName} až bude předavat nějaka ta jmena -const nahoře definovana ofc*/}
+                        Chat2 ...........................................................................................................................................
+                        ................................................................................
+                    </div>
+
+                </Stack>
+            </div>
+
+            <div className="bg-white">
+                <Form>
+                    <Form.Group className="text-muted d-flex justify-content-start align-items-center pe-3 pt-3 mt-2">
+                        <InputGroup>
+                            <Form.Control type="text" placeholder="Type message" />
+                                <Button variant="primary" type="button">
+                                    <Send />
+                                </Button>
+                        </InputGroup>
+                    </Form.Group>
+                </Form>
+            </div>
         </div>
     )
 }
 export default MainChatWindow;
+
