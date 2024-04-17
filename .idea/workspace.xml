@@ -4,9 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3a0c8874-ddad-46b5-a13d-7d2476a9396c" name="Changes" comment="Changed the WebSocketService.ts connection to the websocket and also updated the url">
+    <list default="true" id="3a0c8874-ddad-46b5-a13d-7d2476a9396c" name="Changes" comment="Removed websocket typo">
+      <change afterPath="$PROJECT_DIR$/docs/ChatWindowFrame.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/LoginFrame.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/PhoneChatFrame.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/PhoneUserSelectionFrame.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/RegisterFrame.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/service/WebSocketService.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/service/WebSocketService.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
     </list>
     <list id="27c46bc7-9e82-49d1-b8b6-f5b4ce572a73" name="Changes by Lenovo" comment="" />
     <option name="SHOW_DIALOG" value="false" />
@@ -43,25 +48,33 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;TODO_SCOPE&quot;: &quot;All Places&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;1.8&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Lenovo/Desktop/SchoolProjects/SWI2/Semestral_Project/webAppDesktop&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;npm.start.executor&quot;: &quot;Debug&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;C:\\Users\\Lenovo\\Desktop\\SchoolProjects\\SWI2\\Semestral_Project\\webAppDesktop\\node_modules\\typescript\\lib&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "TODO_SCOPE": "All Places",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "master",
+    "jdk.selected.JAVA_MODULE": "1.8",
+    "last_opened_file_path": "C:/Users/Lenovo/Desktop/SchoolProjects/SWI2/Semestral_Project/webAppDesktop/docs",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "npm.start.executor": "Debug",
+    "ts.external.directory.path": "C:\\Users\\Lenovo\\Desktop\\SchoolProjects\\SWI2\\Semestral_Project\\webAppDesktop\\node_modules\\typescript\\lib",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Lenovo\Desktop\SchoolProjects\SWI2\Semestral_Project\webAppDesktop\docs" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Lenovo\Desktop\SchoolProjects\SWI2\Semestral_Project\webAppDesktop\docs" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration name="start" type="js.build_tools.npm" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
@@ -112,7 +125,7 @@
       <workItem from="1712763456885" duration="859000" />
       <workItem from="1713272337764" duration="578000" />
       <workItem from="1713358322016" duration="972000" />
-      <workItem from="1713359727494" duration="1260000" />
+      <workItem from="1713359727494" duration="2783000" />
     </task>
     <task id="LOCAL-00001" summary="new chat,login,navbar,register (just boostrap and routes)&#10;modified tsconfig.json, index.tsx, App.tsx,">
       <created>1706729696710</created>
@@ -180,7 +193,15 @@
       <option name="project" value="LOCAL" />
       <updated>1712503601459</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Removed websocket typo">
+      <option name="closed" value="true" />
+      <created>1713361027620</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1713361027620</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -206,6 +227,7 @@
     <MESSAGE value="Changed url for login" />
     <MESSAGE value="remade Login and register" />
     <MESSAGE value="Changed the WebSocketService.ts connection to the websocket and also updated the url" />
-    <option name="LAST_COMMIT_MESSAGE" value="Changed the WebSocketService.ts connection to the websocket and also updated the url" />
+    <MESSAGE value="Removed websocket typo" />
+    <option name="LAST_COMMIT_MESSAGE" value="Removed websocket typo" />
   </component>
 </project>
