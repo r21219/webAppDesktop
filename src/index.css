@@ -11,9 +11,6 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
-.message-box{
-  height: 85px;
-}
 
 .bubble {
   max-width: 70%;
@@ -31,5 +28,14 @@ code {
   background-color: #007bff;
   align-self: flex-end;
   color: #fff;
+}
+
+.size-box{
+  border: 1px solid #ccc;
+  padding: 10px;
+  overflow-y: auto;
+  border-radius: 5px;
+  max-height: 80vh;
+  min-height: 80vh;
 }
 
