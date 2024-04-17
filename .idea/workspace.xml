@@ -4,12 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3a0c8874-ddad-46b5-a13d-7d2476a9396c" name="Changes" comment="Added websocket functions to login and register">
+    <list default="true" id="3a0c8874-ddad-46b5-a13d-7d2476a9396c" name="Changes" comment="Changed the WebSocketService.ts connection to the websocket and also updated the url">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ChatMessageManagerComponent.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ChatMessageManagerComponent.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controller/ApiClient.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/ApiClient.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Login.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Login.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Register.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Register.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/service/WebSocketService.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/service/WebSocketService.ts" afterDir="false" />
     </list>
     <list id="27c46bc7-9e82-49d1-b8b6-f5b4ce572a73" name="Changes by Lenovo" comment="" />
@@ -26,14 +22,12 @@
     &quot;state&quot;: &quot;OPEN&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings">
-    <option name="selectedUrlAndAccountId">
-      <UrlAndAccount>
-        <option name="accountId" value="479164c4-4ed8-43c3-958c-df727003f3e6" />
-        <option name="url" value="https://github.com/r21219/webAppDesktop.git" />
-      </UrlAndAccount>
-    </option>
-  </component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/r21219/webAppDesktop",
+    "accountId": "8bdb0b81-53d5-4d37-a92d-ac60fb422eb8"
+  }
+}]]></component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
@@ -49,25 +43,25 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "TODO_SCOPE": "All Places",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "master",
-    "jdk.selected.JAVA_MODULE": "1.8",
-    "last_opened_file_path": "C:/Users/Lenovo/Desktop/Writeme-Spring-boot",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "npm.start.executor": "Debug",
-    "ts.external.directory.path": "C:\\Users\\Lenovo\\Desktop\\SchoolProjects\\SWI2\\Semestral_Project\\webAppDesktop\\node_modules\\typescript\\lib",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;TODO_SCOPE&quot;: &quot;All Places&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;1.8&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Lenovo/Desktop/SchoolProjects/SWI2/Semestral_Project/webAppDesktop&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;npm.start.executor&quot;: &quot;Debug&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;C:\\Users\\Lenovo\\Desktop\\SchoolProjects\\SWI2\\Semestral_Project\\webAppDesktop\\node_modules\\typescript\\lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration name="start" type="js.build_tools.npm" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
@@ -79,6 +73,13 @@
       <envs />
       <method v="2" />
     </configuration>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-1d06a55b98c1-74d2a5396914-JavaScript-WS-241.14494.235" />
+      </set>
+    </attachedChunks>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -105,7 +106,13 @@
       <workItem from="1710659664930" duration="401000" />
       <workItem from="1710660181778" duration="628000" />
       <workItem from="1710663851479" duration="15854000" />
-      <workItem from="1712494813714" duration="7369000" />
+      <workItem from="1712494813714" duration="7731000" />
+      <workItem from="1712665195560" duration="59000" />
+      <workItem from="1712665317093" duration="1997000" />
+      <workItem from="1712763456885" duration="859000" />
+      <workItem from="1713272337764" duration="578000" />
+      <workItem from="1713358322016" duration="972000" />
+      <workItem from="1713359727494" duration="1260000" />
     </task>
     <task id="LOCAL-00001" summary="new chat,login,navbar,register (just boostrap and routes)&#10;modified tsconfig.json, index.tsx, App.tsx,">
       <created>1706729696710</created>
@@ -165,7 +172,15 @@
       <option name="project" value="LOCAL" />
       <updated>1710667974825</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Changed the WebSocketService.ts connection to the websocket and also updated the url">
+      <option name="closed" value="true" />
+      <created>1712503601458</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1712503601459</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -190,6 +205,7 @@
     <MESSAGE value="basic design - chat window - update" />
     <MESSAGE value="Changed url for login" />
     <MESSAGE value="remade Login and register" />
-    <option name="LAST_COMMIT_MESSAGE" value="remade Login and register" />
+    <MESSAGE value="Changed the WebSocketService.ts connection to the websocket and also updated the url" />
+    <option name="LAST_COMMIT_MESSAGE" value="Changed the WebSocketService.ts connection to the websocket and also updated the url" />
   </component>
 </project>

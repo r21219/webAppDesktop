@@ -7,7 +7,7 @@ const WebSocketService = () => {
 
     const connect = (onMessageCallback: (message: CustomerMessage) => void) => {
         const token = ApiClient.getToken();
-        const newSocket = new WebSocket(`ws://localhost:9090/api/v1/ws-message?token=${token}&}`);
+        const newSocket = new WebSocket(`ws://localhost:9090/api/v1/ws-message?token=${token}`);
         const stompClient = new Client({
             webSocketFactory: () => newSocket,
         });
