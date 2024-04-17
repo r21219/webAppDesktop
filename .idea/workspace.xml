@@ -4,11 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3a0c8874-ddad-46b5-a13d-7d2476a9396c" name="Changes" comment="remade Login and register">
+    <list default="true" id="3a0c8874-ddad-46b5-a13d-7d2476a9396c" name="Changes" comment="update components - MainChatWindow.tsx, SideContactsWindow.tsx and Chat.tsx">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/context/AuthContext.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/context/AuthContext.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/parts/NavBar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/parts/NavBar.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/service/WebSocketService.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/service/WebSocketService.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Chat/MainChatWindow.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Chat/MainChatWindow.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Chat/SideContactsWindow.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Chat/SideContactsWindow.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Chat.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Chat/Chat.tsx" afterDir="false" />
     </list>
     <list id="27c46bc7-9e82-49d1-b8b6-f5b4ce572a73" name="Changes by Lenovo" comment="" />
     <option name="SHOW_DIALOG" value="false" />
@@ -76,6 +77,8 @@
       <recent name="C:\Users\Lenovo\Desktop\SchoolProjects\SWI2\Semestral_Project\webAppDesktop\docs" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\vikto\Desktop\ŠKOLA\SWI2\webAppDesktop\src\pages\Chat" />
+      <recent name="C:\Users\vikto\Desktop\ŠKOLA\SWI2\webAppDesktop\src\pages" />
       <recent name="C:\Users\Lenovo\Desktop\SchoolProjects\SWI2\Semestral_Project\webAppDesktop\docs" />
     </key>
   </component>
@@ -213,7 +216,21 @@
       <option name="project" value="LOCAL" />
       <updated>1713362594675</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="logout - update NavBar.tsx">
+      <created>1713365819416</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1713365819416</updated>
+    </task>
+    <task id="LOCAL-00013" summary="update components - MainChatWindow.tsx, SideContactsWindow.tsx and Chat.tsx">
+      <created>1713366737896</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1713366737896</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -241,6 +258,8 @@
     <MESSAGE value="Changed the WebSocketService.ts connection to the websocket and also updated the url" />
     <MESSAGE value="Removed websocket typo" />
     <MESSAGE value="Added wireframes and todos for the future development of the FE" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added wireframes and todos for the future development of the FE" />
+    <MESSAGE value="logout - update NavBar.tsx" />
+    <MESSAGE value="update components - MainChatWindow.tsx, SideContactsWindow.tsx and Chat.tsx" />
+    <option name="LAST_COMMIT_MESSAGE" value="update components - MainChatWindow.tsx, SideContactsWindow.tsx and Chat.tsx" />
   </component>
 </project>
