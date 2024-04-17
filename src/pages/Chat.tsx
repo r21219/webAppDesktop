@@ -1,6 +1,7 @@
 import { Button, Container, Form, Stack, Row, Col } from "react-bootstrap";
 import { Link } from "react-router-dom";
-
+//Todo
+// replace static info for components that display messages instead
 const Chat = () => {
     return (
         <Container>

@@ -1,4 +1,5 @@
 import React, {createContext, useContext, useState, PropsWithChildren} from 'react';
+import WebSocketService from "../service/WebSocketService";
 //todo finish logout
 interface AuthContextType {
     userName: string;
@@ -9,9 +10,10 @@ interface AuthContextType {
 const AuthContext = createContext<AuthContextType | undefined>(undefined);
 
 export const AuthProvider: React.FC<PropsWithChildren<{}>> = ({ children }) => {
-    const [userName, setUserName] = useState<string>('');
+    let [userName, setUserName] = useState<string>('');
 
     const logout = () => {
+        WebSocketService().disconnect();
         setUserName('');
     };
 

@@ -1,7 +1,6 @@
 import React from 'react';
 //import logo from './logo.svg';
 import './App.css';
-import ChatMessageManagerComponent from "./components/ChatMessageManagerComponent";
 import{Routes, Route, Navigate} from "react-router-dom";
 import Login from "./pages/Login";
 import Chat from "./pages/Chat";
@@ -32,7 +31,6 @@ function App() {
               <Route path="*" element={<Navigate to="/" />} />
           </Routes>
 
-          <ChatMessageManagerComponent></ChatMessageManagerComponent>
       </Container>
       </AuthProvider>
       </>
