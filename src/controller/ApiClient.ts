@@ -57,12 +57,41 @@ export class ApiClient {
                 return true;
             } else {
                 const errorData = await response.json();
-                console.error("Register error:", errorData); // Log the error data
+                console.error("Register error:", errorData);
                 throw new Error(errorData.message || "Registration failed");
             }
         } catch (error) {
-            console.error("An error occurred during registration:", error); // Log the error
+            console.error("An error occurred during registration:", error);
             throw new Error("An error occurred during registration");
+        }
+    }
+
+    public static async getAllUsersList(): Promise<string[]> {
+        const apiUrl = "http://localhost:9090/api/v1/message/get/users";
+
+        try {
+            const token = this.getToken();
+            if (!token) {
+                throw new Error("No token available");
+            }
+
+            const response = await fetch(apiUrl, {
+                headers: {
+                    Authorization: `Bearer ${token}`,
+                },
+            });
+
+            if (response.ok) {
+                const data = await response.json();
+                return data;
+            } else {
+                const errorData = await response.json();
+                console.error("Error fetching users:", errorData);
+                throw new Error(errorData.message || "Failed to fetch users");
+            }
+        } catch (error) {
+            console.error("An error occurred during fetch:", error);
+            throw new Error("An error occurred during fetch");
         }
     }
 

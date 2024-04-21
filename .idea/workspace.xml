@@ -5,11 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3a0c8874-ddad-46b5-a13d-7d2476a9396c" name="Changes" comment="update components - MainChatWindow.tsx, SideContactsWindow.tsx and Chat.tsx">
+      <change afterPath="$PROJECT_DIR$/src/pages/Chat/SideContactsModal.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Chat/MainChatWindow.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Chat/MainChatWindow.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Chat/SideContactsWindow.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Chat/SideContactsWindow.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Chat.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Chat/Chat.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controller/ApiClient.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/ApiClient.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Chat/SideContactsWindow.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Chat/SideContactsWindow.tsx" afterDir="false" />
     </list>
     <list id="27c46bc7-9e82-49d1-b8b6-f5b4ce572a73" name="Changes by Lenovo" comment="" />
     <option name="SHOW_DIALOG" value="false" />
@@ -21,6 +22,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="TypeScript File" />
+        <option value="TypeScript JSX File" />
       </list>
     </option>
   </component>
@@ -41,6 +43,9 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
+  <component name="PackageJsonUpdateNotifier">
+    <dismissed value="$PROJECT_DIR$/package.json" />
+  </component>
   <component name="ProblemsViewState">
     <option name="selectedTabId" value="CurrentFile" />
   </component>
@@ -53,25 +58,25 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "TODO_SCOPE": "All Places",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "master",
-    "jdk.selected.JAVA_MODULE": "1.8",
-    "last_opened_file_path": "C:/Users/Lenovo/Desktop/SchoolProjects/SWI2/Semestral_Project/webAppDesktop/docs",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "npm.start.executor": "Debug",
-    "ts.external.directory.path": "C:\\Users\\vikto\\Desktop\\ŠKOLA\\SWI2\\webAppDesktop\\node_modules\\typescript\\lib",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;TODO_SCOPE&quot;: &quot;All Places&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;1.8&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Lenovo/Desktop/SchoolProjects/SWI2/Semestral_Project/webAppDesktop/docs&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;npm.start.executor&quot;: &quot;Debug&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;C:\\Users\\pavli\\OneDrive\\Plocha\\SchoolProjects\\webAppDesktop\\node_modules\\typescript\\lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Lenovo\Desktop\SchoolProjects\SWI2\Semestral_Project\webAppDesktop\docs" />

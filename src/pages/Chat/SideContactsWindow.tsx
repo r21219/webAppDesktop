@@ -1,138 +1,48 @@
-import {Button, Col, Form, Row, Stack} from "react-bootstrap";
-import {Link} from "react-router-dom";
-import { PersonFillAdd  } from 'react-bootstrap-icons';
+import React, { useEffect, useState } from 'react';
+import { Button } from 'react-bootstrap';
+import { PersonFillAdd } from 'react-bootstrap-icons';
+import SideContactsModal from './SideContactsModal';
+import {ApiClient} from "../../controller/ApiClient";
 
-import { ListGroup } from 'react-bootstrap';
+const SideContactsWindow = () => {
+    const [showModal, setShowModal] = useState(false);
+    const [users, setUsers] = useState<string[]>([]);
 
-const SideContactsWindow = () =>{
+    useEffect(() => {
+        const fetchUsers = async () => {
+            try {
+                const userList = await ApiClient.getAllUsersList();
+                setUsers(userList);
+            } catch (error) {
+                console.error('Error fetching users:', error);
+            }
+        };
+
+        fetchUsers();
+    }, []);
+
+    const handleModalClose = () => {
+        setShowModal(false);
+    };
+
+    const handleModalCreate = (selectedUsers: string[], conversationName: string) => {
+        // Implement your logic for creating conversation here
+        console.log('Selected Users:', selectedUsers);
+        console.log('Conversation Name:', conversationName);
+    };
+
     return (
-        <div className= " size-box d-flex flex-column">
+        <div className="size-box d-flex flex-column">
             <div className="position-sticky top-0 bg-white">
-                <Form>
-                    <Form.Group className="text-muted d-flex justify-content-start align-items-center pe-3 mt-0">
-                        <Form.Control type="text" placeholder="Find conversation..."/>
-                    </Form.Group>
-                </Form>
+                <Button variant="primary" type="button" className="btn-lg d-flex align-items-center rounded-pill" onClick={() => setShowModal(true)}>
+                    <PersonFillAdd />
+                </Button>
             </div>
-            <ListGroup variant="flush" className={"flex-grow-1 message-box pe-3 overflow-auto"}>
-                {/* List of Chats */}
-                <ListGroup.Item className="chat_list">
-                    <div className="chat_people">
-                        <Link to="/chat">
-                            <div className="chat_ib">
-                                <Row>
-                                    <Col xs={8}>
-                                        <h5>Pavlína Pavenlová</h5>
-                                    </Col>
-                                    <Col xs={4} className="text-end">
-                                        <span className="chat_date">Dec 25</span>
-                                    </Col>
-                                </Row>
-                                <p>Another chat message...</p>
-                            </div>
-                        </Link>
-                    </div>
-                </ListGroup.Item>
-
-                <ListGroup.Item className="chat_list">
-                    <div className="chat_people">
-                        <Link to="/chat">
-                            <div className="chat_ib">
-                                <Row>
-                                    <Col xs={8}>
-                                        <h5>Pavlína Pavenlová</h5>
-                                    </Col>
-                                    <Col xs={4} className="text-end">
-                                        <span className="chat_date">Dec 25</span>
-                                    </Col>
-                                </Row>
-                                <p>Another chat message...</p>
-                            </div>
-                        </Link>
-                    </div>
-                </ListGroup.Item>
-
-                <ListGroup.Item className="chat_list">
-                    <div className="chat_people">
-                        <Link to="/chat">
-                            <div className="chat_ib">
-                                <Row>
-                                    <Col xs={8}>
-                                        <h5>Pavlína Pavenlová</h5>
-                                    </Col>
-                                    <Col xs={4} className="text-end">
-                                        <span className="chat_date">Dec 25</span>
-                                    </Col>
-                                </Row>
-                                <p>Another chat message...</p>
-                            </div>
-                        </Link>
-                    </div>
-                </ListGroup.Item>
-
-                <ListGroup.Item className="chat_list">
-                    <div className="chat_people">
-                        <Link to="/chat">
-                            <div className="chat_ib">
-                                <Row>
-                                    <Col xs={8}>
-                                        <h5>Pavlína Pavenlová</h5>
-                                    </Col>
-                                    <Col xs={4} className="text-end">
-                                        <span className="chat_date">Dec 25</span>
-                                    </Col>
-                                </Row>
-                                <p>Another chat message...</p>
-                            </div>
-                        </Link>
-                    </div>
-                </ListGroup.Item>
-
-                <ListGroup.Item className="chat_list">
-                    <div className="chat_people">
-                        <Link to="/chat">
-                            <div className="chat_ib">
-                                <Row>
-                                    <Col xs={8}>
-                                        <h5>Pavlína Pavenlová</h5>
-                                    </Col>
-                                    <Col xs={4} className="text-end">
-                                        <span className="chat_date">Dec 25</span>
-                                    </Col>
-                                </Row>
-                                <p>Another chat message...</p>
-                            </div>
-                        </Link>
-                    </div>
-                </ListGroup.Item>
-
-                <ListGroup.Item className="chat_list">
-                    <div className="chat_people">
-                        <Link to="/chat">
-                            <div className="chat_ib">
-                                <Row>
-                                    <Col xs={8}>
-                                        <h5>Pavlína Pavenlová</h5>
-                                    </Col>
-                                    <Col xs={4} className="text-end">
-                                        <span className="chat_date">Dec 25</span>
-                                    </Col>
-                                </Row>
-                                <p>Another chat message...</p>
-                            </div>
-                        </Link>
-                    </div>
-                </ListGroup.Item>
-
-                <div className = "position-sticky bottom-0 d-flex justify-content-end">
-                    <Button variant="primary" type="button" className="btn-lg d-flex align-items-center rounded-pill">
-                        <PersonFillAdd  />
-                    </Button>
-                </div>
-            </ListGroup>
-
+            {/* List of Chats */}
+            {/* Implement your list of chats here */}
+            {showModal && <SideContactsModal users={users} onClose={handleModalClose} onCreate={handleModalCreate} />}
         </div>
-    )
-}
-export default SideContactsWindow;
+    );
+};
 
+export default SideContactsWindow;
