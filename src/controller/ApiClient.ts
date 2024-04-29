@@ -83,7 +83,8 @@ export class ApiClient {
 
             if (response.ok) {
                 const data = await response.json();
-                return data;
+                console.log("The current user:", localStorage.getItem('userName'));
+                return data.filter((user: string | null) => user != localStorage.getItem('userName'));
             } else {
                 const errorData = await response.json();
                 console.error("Error fetching users:", errorData);

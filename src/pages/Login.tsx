@@ -7,7 +7,7 @@ import {CustomerMessage} from "../model/CustomerMessage";
 import {useAuth} from "../context/AuthContext";
 
 const Login = () => {
-    const {setUserName} = useAuth();
+    const {login} = useAuth();
     const [formData, setFormData] = useState({
         name: "",
         password: "",
@@ -30,7 +30,7 @@ const Login = () => {
         try {
             await ApiClient.login(formData.name, formData.password);
             console.log("Login successful");
-            setUserName(formData.name);
+            login(formData.name);
             WebSocketService().connect((message: CustomerMessage) => {
                 console.log(message);
             });

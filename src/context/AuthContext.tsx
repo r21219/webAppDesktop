@@ -1,25 +1,37 @@
-import React, {createContext, useContext, useState, PropsWithChildren} from 'react';
+import React, { createContext, useContext, useEffect, useState, PropsWithChildren } from 'react';
 import WebSocketService from "../service/WebSocketService";
-//todo finish logout
+
 interface AuthContextType {
-    userName: string;
-    setUserName: (name: string) => void;
+    userName: string | null;
+    login: (name: string) => void;
     logout: () => void;
 }
 
 const AuthContext = createContext<AuthContextType | undefined>(undefined);
 
 export const AuthProvider: React.FC<PropsWithChildren<{}>> = ({ children }) => {
-    const [userName, setUserName] = useState<string>('');
+    const [userName, setUserName] = useState<string | null>(localStorage.getItem('userName') || null);
 
-    const logout = () => {
-        WebSocketService().disconnect();
-        setUserName('');
-
+    const login = (name: string) => {
+        setUserName(name);
+        localStorage.setItem('userName', name);
     };
 
+    const logout = () => {
+        setUserName(null);
+        WebSocketService().disconnect();
+        localStorage.removeItem('userName');
+    };
+
+    useEffect(() => {
+        const storedUserName = localStorage.getItem('userName');
+        if (storedUserName) {
+            setUserName(storedUserName);
+        }
+    }, []);
+
     return (
-        <AuthContext.Provider value={{ userName, setUserName, logout }}>
+        <AuthContext.Provider value={{ userName, login, logout}}>
             {children}
         </AuthContext.Provider>
     );

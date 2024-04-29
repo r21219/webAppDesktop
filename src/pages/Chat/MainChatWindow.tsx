@@ -1,5 +1,6 @@
 import {Button, Form, Stack, InputGroup} from "react-bootstrap";
-import { Send } from 'react-bootstrap-icons';
+import {Send} from "react-bootstrap-icons";
+
 const MainChatWindow = () =>{
     return (
         <div className="size-box-main d-flex flex-column">
