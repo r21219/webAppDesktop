@@ -1,10 +1,10 @@
 import {Alert, Button, Col, Form, Row, Stack} from "react-bootstrap";
 import {Link, useNavigate} from "react-router-dom";
 import {useState} from "react";
-import {ApiClient} from "../controller/ApiClient";
 import WebSocketService from "../service/WebSocketService";
 import {CustomerMessage} from "../model/CustomerMessage";
 import {useAuth} from "../context/AuthContext";
+import {AuthClient} from "../controller/AuthClient";
 
 const Login = () => {
     const {login} = useAuth();
@@ -28,7 +28,7 @@ const Login = () => {
         }
 
         try {
-            await ApiClient.login(formData.name, formData.password);
+            await AuthClient.login(formData.name, formData.password);
             console.log("Login successful");
             login(formData.name);
             WebSocketService().connect((message: CustomerMessage) => {

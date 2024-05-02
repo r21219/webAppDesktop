@@ -1,7 +1,7 @@
 import {Alert, Button, Col, Form, Row, Stack} from "react-bootstrap";
 import {Link, useNavigate} from "react-router-dom";
 import {useState} from "react";
-import {ApiClient} from "../controller/ApiClient";
+import {AuthClient} from "../controller/AuthClient";
 
 const Register = () => {
     const [formData, setFormData] = useState({
@@ -31,7 +31,7 @@ const Register = () => {
         }
 
         try {
-            await ApiClient.register(formData.name, formData.password);
+            await AuthClient.register(formData.name, formData.password);
             console.log("Registration successful");
             navigate("/login");
         } catch (error: unknown) {

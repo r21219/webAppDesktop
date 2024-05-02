@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { Accordion, Button, Form, Modal } from 'react-bootstrap';
-import { ApiClient } from "../../controller/ApiClient";
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import {ConversationClient} from "../../controller/ConversationClient";
 
 interface SideContactsModalProps {
     users: string[];
@@ -23,7 +23,7 @@ const SideContactsModal: React.FC<SideContactsModalProps> = ({ users, onClose })
 
     const handleCreate = async () => {
         try {
-            await ApiClient.createConversation(selectedUsers, conversationName);
+            await ConversationClient.createConversation(selectedUsers, conversationName);
             toast.success('Conversation created successfully.');
             onClose();
         } catch (error) {

@@ -21,6 +21,7 @@ export const AuthProvider: React.FC<PropsWithChildren<{}>> = ({ children }) => {
         setUserName(null);
         WebSocketService().disconnect();
         localStorage.removeItem('userName');
+        localStorage.removeItem('token');
     };
 
     useEffect(() => {

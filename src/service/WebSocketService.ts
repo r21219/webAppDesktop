@@ -1,12 +1,11 @@
 import { Client, Message } from '@stomp/stompjs';
 import { CustomerMessage } from "../model/CustomerMessage";
-import {ApiClient} from "../controller/ApiClient";
 
 const WebSocketService = () => {
     let stompClient: Client | null = null;
 
     const connect = (onMessageCallback: (message: CustomerMessage) => void) => {
-        const token = ApiClient.getToken();
+        const token = localStorage.getItem("token");
         const newSocket = new WebSocket(`ws://localhost:9090/api/v1/ws-message?token=${token}`);
         const stompClient = new Client({
             webSocketFactory: () => newSocket,
