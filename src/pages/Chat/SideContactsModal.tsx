@@ -1,13 +1,15 @@
 import React, { useState } from 'react';
 import { Accordion, Button, Form, Modal } from 'react-bootstrap';
+import { ApiClient } from "../../controller/ApiClient";
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 interface SideContactsModalProps {
     users: string[];
     onClose: () => void;
-    onCreate: (selectedUsers: string[], conversationName: string) => void;
 }
 
-const SideContactsModal: React.FC<SideContactsModalProps> = ({ users, onClose, onCreate }) => {
+const SideContactsModal: React.FC<SideContactsModalProps> = ({ users, onClose }) => {
     const [selectedUsers, setSelectedUsers] = useState<string[]>([]);
     const [conversationName, setConversationName] = useState<string>('');
 
@@ -19,9 +21,15 @@ const SideContactsModal: React.FC<SideContactsModalProps> = ({ users, onClose, o
         }
     };
 
-    const handleCreate = () => {
-        onCreate(selectedUsers, conversationName);
-        onClose();
+    const handleCreate = async () => {
+        try {
+            await ApiClient.createConversation(selectedUsers, conversationName);
+            toast.success('Conversation created successfully.');
+            onClose();
+        } catch (error) {
+            console.error('Error creating conversation:', error);
+            toast.error('Failed to create conversation.');
+        }
     };
 
     return (

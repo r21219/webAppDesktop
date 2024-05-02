@@ -2,7 +2,9 @@ import React, { useEffect, useState } from 'react';
 import { Button } from 'react-bootstrap';
 import { PersonFillAdd } from 'react-bootstrap-icons';
 import SideContactsModal from './SideContactsModal';
-import {ApiClient} from "../../controller/ApiClient";
+import { ApiClient } from "../../controller/ApiClient";
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const SideContactsWindow = () => {
     const [showModal, setShowModal] = useState(false);
@@ -25,12 +27,6 @@ const SideContactsWindow = () => {
         setShowModal(false);
     };
 
-    const handleModalCreate = (selectedUsers: string[], conversationName: string) => {
-        // Implement your logic for creating conversation here
-        console.log('Selected Users:', selectedUsers);
-        console.log('Conversation Name:', conversationName);
-    };
-
     return (
         <div className="size-box d-flex flex-column">
             <div className="position-sticky top-0 bg-white">
@@ -38,9 +34,8 @@ const SideContactsWindow = () => {
                     <PersonFillAdd />
                 </Button>
             </div>
-            {/* List of Chats */}
-            {/* Implement your list of chats here */}
-            {showModal && <SideContactsModal users={users} onClose={handleModalClose} onCreate={handleModalCreate} />}
+            {showModal && <SideContactsModal users={users} onClose={handleModalClose} />}
+            <ToastContainer />
         </div>
     );
 };
