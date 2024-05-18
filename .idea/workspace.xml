@@ -4,13 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3a0c8874-ddad-46b5-a13d-7d2476a9396c" name="Changes" comment="Split the ApiClient.ts into more clients for more readability also token is now in localStorage">
-      <change afterPath="$PROJECT_DIR$/src/model/CustomerConversationDTO.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/Chat/SideContactsWindow.css" afterDir="false" />
+    <list default="true" id="3a0c8874-ddad-46b5-a13d-7d2476a9396c" name="Changes" comment="Added new conversations components">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/controller/ConversationClient.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/ConversationClient.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Chat/SideContactsWindow.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Chat/SideContactsWindow.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/service/WebSocketService.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/service/WebSocketService.ts" afterDir="false" />
     </list>
     <list id="27c46bc7-9e82-49d1-b8b6-f5b4ce572a73" name="Changes by Lenovo" comment="" />
     <option name="SHOW_DIALOG" value="false" />
@@ -64,26 +61,26 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "TODO_SCOPE": "All Places",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "master",
-    "jdk.selected.JAVA_MODULE": "1.8",
-    "last_opened_file_path": "C:/Users/Lenovo/Desktop/SchoolProjects/SWI2/Semestral_Project/webAppDesktop",
-    "list.type.of.created.stylesheet": "CSS",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "npm.start.executor": "Debug",
-    "ts.external.directory.path": "C:\\Users\\Lenovo\\Desktop\\SchoolProjects\\SWI2\\Semestral_Project\\webAppDesktop\\node_modules\\typescript\\lib",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;TODO_SCOPE&quot;: &quot;All Places&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;1.8&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Lenovo/Desktop/SchoolProjects/SWI2/Semestral_Project/webAppDesktop&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;npm.start.executor&quot;: &quot;Debug&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;C:\\Users\\Lenovo\\Desktop\\SchoolProjects\\SWI2\\Semestral_Project\\webAppDesktop\\node_modules\\typescript\\lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Lenovo\Desktop\SchoolProjects\SWI2\Semestral_Project\webAppDesktop\docs" />
@@ -154,7 +151,15 @@
       <workItem from="1714568936731" duration="10658000" />
       <workItem from="1714639304499" duration="9167000" />
       <workItem from="1714893245948" duration="616000" />
-      <workItem from="1715082958051" duration="10177000" />
+      <workItem from="1715082958051" duration="13513000" />
+      <workItem from="1715188070720" duration="17000" />
+      <workItem from="1715199990008" duration="122000" />
+      <workItem from="1715200145416" duration="449000" />
+      <workItem from="1715202656131" duration="201000" />
+      <workItem from="1715202863762" duration="27000" />
+      <workItem from="1715250592196" duration="4497000" />
+      <workItem from="1715695770959" duration="5394000" />
+      <workItem from="1715785894382" duration="657000" />
     </task>
     <task id="LOCAL-00001" summary="new chat,login,navbar,register (just boostrap and routes)&#10;modified tsconfig.json, index.tsx, App.tsx,">
       <created>1706729696710</created>
@@ -276,7 +281,15 @@
       <option name="project" value="LOCAL" />
       <updated>1714650978433</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Added new conversations components">
+      <option name="closed" value="true" />
+      <created>1715096554017</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1715096554018</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -309,6 +322,7 @@
     <MESSAGE value="Reworked AuthContext.tsx and made sure current user is excluded from the list of users that are fetched" />
     <MESSAGE value="Added a functionality to adding conversations" />
     <MESSAGE value="Split the ApiClient.ts into more clients for more readability also token is now in localStorage" />
-    <option name="LAST_COMMIT_MESSAGE" value="Split the ApiClient.ts into more clients for more readability also token is now in localStorage" />
+    <MESSAGE value="Added new conversations components" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added new conversations components" />
   </component>
 </project>

@@ -22,7 +22,7 @@ const WebSocketService = () => {
                 }
             });
         };
-
+//Todo create /notification for ws create a channel on BE install
         stompClient.onStompError = (error: any) => {
             console.error("WebSocket connection error:", error);
         };
